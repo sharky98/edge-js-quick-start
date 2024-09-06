@@ -2,14 +2,12 @@ const path = require('path');
 var net = process.argv[2];
 var framework = net.charAt(0).toUpperCase() + net.substr(1);
 var namespace = 'QuickStart.' + framework;
-if(net === 'core') net = '';
-var version = net == 'standard' ? '2.0' : '7.0'
+var version = '7.0'
 
-const baseNetAppPath = path.join(__dirname, '/src/'+ namespace +'/bin/Debug/net'+ net + version);
+const baseNetAppPath = path.join(__dirname, '/src/'+ namespace +'/bin/Debug/net' + version);
 
 process.env.EDGE_USE_CORECLR = 1;
-if(net !== 'standard')
-    process.env.EDGE_APP_ROOT = baseNetAppPath;
+process.env.EDGE_APP_ROOT = baseNetAppPath;
 
 var edge = require('edge-js');
 
