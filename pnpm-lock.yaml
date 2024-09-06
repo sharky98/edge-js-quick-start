@@ -1,0 +1,37 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      edge-js:
+        specifier: ^22.1.2
+        version: 22.7.0
+
+packages:
+
+  '@agracio/edge-cs@1.3.7':
+    resolution: {integrity: sha512-sFwGCGmoa9JdODegeDFJL4IH6N8IgDobxbS31BiXaiOdf8bC7EyHigFp0WYRKhIgK72E9nLnNwiRJRMO/AYGdg==}
+    engines: {node: '>= 0.8'}
+
+  edge-js@22.7.0:
+    resolution: {integrity: sha512-R1iZaWDkFM1h+lRejlrQSkRGeu0QBfTjHQ49PkqR5ULCpuF4wAFDxEnxEbXK1KTql+131ZCmiJt1QVgLkuciDg==}
+    engines: {node: '>=16.0.0', npm: '>=8.0.0'}
+
+  nan@2.20.0:
+    resolution: {integrity: sha512-bk3gXBZDGILuuo/6sKtr0DQmSThYHLtNCdSdXk9YkxD/jK6X2vmCyyXBBxyqZ4XcnzTyYEAThfX3DCEnLf6igw==}
+
+snapshots:
+
+  '@agracio/edge-cs@1.3.7': {}
+
+  edge-js@22.7.0:
+    dependencies:
+      edge-cs: '@agracio/edge-cs@1.3.7'
+      nan: 2.20.0
+
+  nan@2.20.0: {}
